@@ -75,22 +75,191 @@ print(True < False)
 #Ejercicio: Codificación de caracteres
 print('"Estoy"','""aprendiendo""','"""python"""',sep="\n")
 
+#Python como calculadora
+print(2 + 2)
+print(2 - 2)
+print(2 * 2)
+print(2 / 2)
 
+#Exponentes
+print(2 ** 3)
+print(2 ** 3.)
+print(2. ** 3)
+print(2. ** 3.)
 
+#Multiplicación
+print(2 * 3)
+print(2 * 3.)
+print(2. * 3)
+print(2. * 3.)
 
+#División
+print(6 / 3)
+print(6 / 3.)
+print(6. / 3)
+print(6. / 3.)
 
+#División entera
+print(6 // 3)
+print(6 // 3.)
+print(6. // 3)
+print(6. // 3.)
 
+print(6 // 4)
+print(6. // 4)
 
+print(-6 // 4)
+print(6. // -4)
 
+#Residuo (Módulo)
+print(14 % 4)
+print(12 % 4.5)
 
+#Suma
+print(-4 + 4)
+print(-4. + 8)
 
+#Resta
+print(-4 - 4)
+print(4. - 8)
 
+#Negación
+print(-1.1)
 
+#Identidad
+print(+2)
 
+#Operadores y enlaces
+#Izquierda
+print(9 % 6 % 2)
 
+#Derecha
+print(2 ** 2 ** 3)
 
+#Variables - Creación de una variable
+var = 1
+print(var)
 
+var = 1
+balance_cuenta = 1000.0
+nombreCliente = 'John Doe'
+print(var, balance_cuenta, nombreCliente)
 
+#Reasignar el valor de una variable
+var = 1
+print(var)
+var = var + 1
+print(var)
 
+#Pitágoras
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
 
+#Familiarizarse con las variables
+juan = 3
+maria = 5
+adan = 6
+mensaje = "Número Total de Manzanas:"
+totalManzanas = juan + maria + adan
 
+print(juan, maria, adan, sep=",")
+print(totalManzanas)
+print(mensaje, totalManzanas)
+
+#Operadores abreviados
+x *= 2
+oveja+= 1
+
+#Conversión de distancias
+kilometros = 12.25
+millas = 7.38
+
+millas_a_kilometros = millas * 1.61
+kilometros_a_millas = kilometros / 1.61
+
+print(millas, " millas son ", round(millas_a_kilometros, 2), " kilómetros ")
+print(kilometros, " kilómetros son ", round(kilometros_a_millas, 2), " millas ")
+
+#Operadores y expresiones
+# codifica aquí tus datos de prueba.
+x = float(-1)
+# escribe tu código aquí.
+y = (3 * x ** 3) - (2 * x ** 2) + (3 * x) - 1
+print("y =", y)
+
+#Cometarios
+
+#Este programa fue escrito hace dos días
+#Este programa calcula los segundos en cierto número de horas determinadas 
+
+horas = 2
+segundosHora = 3600
+
+print("Horas: ", horas) #imprime el numero de horas
+print("Segundos en horas: ", horas * segundosHora) # se imprime el numero de segundos en determinado numero de horas
+
+print("Adiós")
+
+#Input sin argumentos
+print("Dime algo...")
+algo = input()
+print("Mmm...", algo, "...¿en serio?")
+
+#Input con argumentos
+algo = input("Dime algo...")
+print("Mmm...", algo, "...¿En serio?")
+
+#Input con casteo
+algo = float(input("Inserta un número: "))
+resultado = algo ** 2.0
+print(algo, "al cuadrado es", resultado)
+
+cateto_a = float(input("Inserta la longitud del primer cateto: "))
+cateto_b = float(input("Inserta la longitud del segundo cateto "))
+print("La longitud de la hipotenusa es: ", (cateto_a**2 + cateto_b**2) ** .5)
+
+#Concatenación
+nom = input("¿Me puedes dar tu nombre por favor? ")
+ape = input("¿Me puedes dar tu apellido por favor? ")
+print("Gracias.")
+print("\nTu nombre es " + nom + " " + ape + ".")
+
+#Replica
+print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+
+#str()
+cateto_a = float(input("Ingresa la longitud del primer cateto: "))
+cateto_b = float(input("Ingresa la longitud del segundo cateto: "))
+print("La longitud de la hipotenusa es: " + str((cateto_a**2 + cateto_b**2) ** .5))
+
+#Uso de las 4 operaciones básicas
+numero1 = float(input("Ingrea el primer valor: "))
+numero2 = float(input("Ingrea el segundo valor: "))
+
+print("El resultado de la suma es: " + str(numero1 + numero2))
+print("El resultado de la resta es: " + str(numero1 - numero2))
+print("El resultado de la multiplicación es: " + str(numero1 * numero2))
+print("El resultado de la división es: " + str(numero1 / numero2))
+
+print("\n¡Eso es todo, amigos!")
+
+#Precedencia y asociatividad
+x = float(input("Ingresa el valor para x: "))
+y = 1 / (x + (1 / (x + (1 / (x + (1 / x))))))
+print("y =", y)
+
+#Fenómenos del día a día en términos de un lenguaje de programación
+hora = int(input("Hora de inicio (horas): "))
+min = int(input("Minuto de inicio (minutos): "))
+dura = int(input("Duración del evento (minutos): "))
+
+minFinal = (min + dura) % 60 #Obtenemos el minuto en el que termina el evento
+horasExtras = (min + dura) // 60 #Obtenemos el desborde de las horas
+horaFinal = (hora + horasExtras) % 24 #Obtenemos la hora final del evento
+
+print("El evento inicia " + str(hora) + ":" + str(min))
+print("El evento termina " + str(horaFinal) + ":" + str(minFinal))
