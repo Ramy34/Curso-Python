@@ -169,8 +169,9 @@ print(totalManzanas)
 print(mensaje, totalManzanas)
 
 #Operadores abreviados
+x = oveja = 1
 x *= 2
-oveja+= 1
+oveja += 1
 
 #Conversión de distancias
 kilometros = 12.25
