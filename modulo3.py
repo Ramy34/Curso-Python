@@ -111,3 +111,61 @@ if año >= 1582: #Comprueba si el año ingresado es permitido por el calendario
 else:
     print("No dentro del período del calendario gregoriano")
 
+#Puntos clave del If-Else
+x = 5
+y = 10
+z = 8
+
+print(x > y) #False
+print(y > z) #True
+
+x, y, z = 5, 10, 8
+
+print(x > z) #False
+print((y - 5) == x) #True
+
+x, y, z = 5, 10, 8
+x, y, z = z, y, x
+
+print(x > z) #True
+print((y - 5) == x) #False
+
+x = 10
+
+if x == 10: #True
+    print(x == 10) 
+if x > 5: #True
+    print(x > 5)
+if x < 10: #False
+    print(x < 10)
+else: #No entra
+    print("else") 
+
+x = "1"
+
+if x == 1: #False
+    print("uno")
+elif x == "1": #True
+    if int (x) > 1: #False
+        print("dos")
+    elif int (x) < 1: #False
+        print("tres")
+    else: #Aquí entra
+        print("cuatro")
+if int (x) == 1: #True
+    print("cinco")
+else: #Aquí no entra
+    print("seis") 
+
+x = 1
+y = 1.0
+z = "1"
+
+if x == y: #True
+    print("uno")
+if y == int (z): #True
+    print("dos")
+elif x == y: #No entra ya que el anterior if es correcto
+    print("tres")
+else: #Tampoco entra
+    print("cuatro")
