@@ -269,3 +269,85 @@ for cuenta in range(1,6):
     print(str(cuenta) + " Mississippi")
     time.sleep (1)
 print("¡Listo o no, ahí voy!")
+
+# break - ejemplo
+
+print("La instrucción de ruptura:")
+for i in range(1,6):
+    if i == 3:
+        break
+    print("Dentro del ciclo.", i)
+print("Fuera del ciclo.")
+
+# continua - ejemplo
+
+print("\nLa instrucción continue:")
+for i in range(1,6):
+    if i == 3:
+        continue
+    print("Dentro del ciclo.", i)
+print("Fuera del ciclo.")
+
+#Ejemplo de número mayor con break
+numeroMayor = -99999999
+contador = 0
+
+while True:
+    numero = int (input ("Ingresa un número o escribe -1 para finalizar el programa:"))
+    if numero == -1:
+        break
+    contador = 1
+    if numero > numeroMayor:
+        numeroMayor = numero
+
+if contador != 0:
+    print("El número más grande es", numeroMayor)
+else:
+    print("No ha ingresado ningún número") 
+
+#Ejemplo de número mayor con continue
+numeroMayor = -99999999
+contador = 0
+
+numero = int (input("Ingresa un número o escribe -1 para finalizar el programa: "))
+
+while numero != -1:
+    if numero == -1:
+        continue
+    contador = 1
+
+    if numero > numeroMayor:
+        numeroMayor = numero
+    numero = int (input ("Ingresa un número o escribe -1 para finalizar el programa: "))
+
+if contador:
+    print("El número más grande es", numeroMayor)
+else:
+    print("No ha ingresado ningún número")
+
+#Ejercicio de break
+secretWord = "chupacabras"
+while True:
+    word = input("Ingresa la palabra secreta: ")
+    if (word == secretWord):
+        break
+    
+print("¡Has dejado el ciclo con éxito")
+
+#Ejercicio continue
+userWord = input("Ingresa una palabra: ")
+userWord = userWord.upper()
+
+for letra in userWord:
+    if (letra == "A"):
+        continue
+    elif (letra == "E"):
+        continue
+    elif (letra == "I"):
+        continue
+    elif (letra == "O"):
+        continue
+    elif (letra == "U"):
+        continue
+    else:
+        print(letra)
