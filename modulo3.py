@@ -189,7 +189,7 @@ while numero != -1:
 # Imprimir el número más grande
 print("El número más grande es:", numeroMayor)
 
-#Ejercicio ciclo while
+#Ejemplo ciclo while
 # programa que lee una secuencia de números
 # y cuenta cuántos números son pares y cuántos son impares
 # programa termina cuando se ingresa cero
@@ -229,3 +229,43 @@ while contador:
     contador -= 1
 print("Fuera del ciclo", contador)
 
+#Ejercicio del ciclo while
+numeroSecreto = 777
+
+print(
+"""
++==================================+
+| Bienvenido a mi juego, muggle!   |
+| Introduce un número entero       |
+| y adivina qué número he          |
+| elegido para ti.                 |
+| Entonces,                        |
+| ¿Cuál es el número secreto?      |
++==================================+
+""")
+numero = int(input())
+
+while numero != numeroSecreto:
+    print("¡Ja, ja! ¡Estás atrapado en mi ciclo!")
+    numero = int(input("Te daré otra oportunidad: "))
+print("¡Bien hecho, muggle! Eres libre ahora")
+
+#Ciclo For
+for i in range(10):
+    print("El valor de i es actualmente", i)
+
+for i in range (2, 8):
+    print("El valor de i es actualmente", i)
+
+pow = 1
+for exp in range(16):
+    print ("2 a la potencia de", exp, "es", pow)
+    pow *= 2 
+
+#Ejercicio For: contar con Mississippis
+import time
+
+for cuenta in range(1,6):
+    print(str(cuenta) + " Mississippi")
+    time.sleep (1)
+print("¡Listo o no, ahí voy!")
