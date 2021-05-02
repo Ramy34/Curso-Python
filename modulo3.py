@@ -351,3 +351,87 @@ for letra in userWord:
         continue
     else:
         print(letra)
+
+palabraSinVocal = ""
+userWord = input("Ingresa una palabra: ").upper()
+
+for letra in userWord:
+    
+    if (letra == "A"):
+        continue
+    elif (letra == "E"):
+        continue
+    elif (letra == "I"):
+        continue
+    elif (letra == "O"):
+        continue
+    elif (letra == "U"):
+        continue
+    else:
+        palabraSinVocal += letra
+    
+print(palabraSinVocal)
+
+#While con else
+i = 1
+while i < 5:
+    print (i)
+    i += 1
+else:
+    print("else:", i)
+
+#For con else
+for i in range(5):
+    print(i)
+else:
+    print("else:", i)
+
+#Ejercicio de while
+bloques = int(input("Ingrese el número de bloques: "))
+altura = 0
+
+while (bloques > 0):
+    altura += 1
+    bloques -= altura
+    
+    if(bloques < 0):
+        altura -= 1
+
+print("La altura de la pirámide:", altura)
+
+c0 = int(input("Ingresa un número entero: "))
+pasos = 0
+
+while c0 != 1:
+    if c0 % 2 == 0:
+        c0 //= 2
+    else:
+        c0 = 3 * c0 + 1
+    pasos += 1
+    print(c0)
+print("pasos = " + str(pasos))
+
+#Crea un bucle for que cuente de 0 a 10, e imprima números impares en la pantalla.
+for i in range(1, 11):
+    if (i % 2) != 0:
+        print("Número: " + str(i))
+
+#Crea un bucle while que cuente de 0 a 10, e imprima números impares en la pantalla.
+x = 1
+while x < 11:
+    if (x % 2) != 0:
+        print("Número: " + str(x))
+    x += 1
+
+#Crea un programa con un bucle for y una declaración break. El programa debe iterar sobre los caracteres en una dirección de correo electrónico, salir del bucle cuando llegue al símbolo @ e imprimir la parte antes de @ en una línea.
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end = "")
+
+#Crea un programa con un bucle for y una declaracióncontinue. El programa debe iterar sobre una cadena de dígitos, reemplazar cada 0 con x, e imprimir la cadena modificada en la pantalla.
+for digit in "0165031806510":
+    if digit == "0":
+        print("x", end = "")
+        continue
+    print(digit, end = "")
