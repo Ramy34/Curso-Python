@@ -435,3 +435,9 @@ for digit in "0165031806510":
         print("x", end = "")
         continue
     print(digit, end = "")
+
+#Desplazamiento Binario
+var = 17
+varRight = var >> 1
+varLeft = var << 2
+print(var, varLeft, varRight)
