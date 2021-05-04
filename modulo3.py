@@ -441,3 +441,37 @@ var = 17
 varRight = var >> 1
 varLeft = var << 2
 print(var, varLeft, varRight)
+
+#Listas
+#Introducción
+numeros = [10, 5, 7, 2, 1]
+print("Contenido de la lista original:", numeros) # imprimiendo contenido de la lista original.
+
+numeros[0] = 111
+print("\nPrevio contenido de la lista:", numeros) # imprimiendo contenido de la lista anterior.
+
+numeros[1] = numeros[4]  # copiando el valor del quinto elemento al segundo
+print("Nuevo contenido de la lista:", numeros) # imprimiendo el contenido de la lista actual.
+
+print("\nLongitud de la lista:", len(numeros)) # imprimiendo la longitud de la lista
+
+del numeros[1] # eliminando el segundo elemento de la lista
+print("Longitud de la nueva lista:", len(numeros)) # imprimiendo nueva longitud de la lista
+print("\nNuevo contenido de la lista:", numeros) # imprimiendo el contenido de la lista actual
+
+#Índices negativos
+print(numeros[-1])
+print(numeros[-2])
+print(numeros[-4])
+
+#Ejercicio
+listaSombrero = [1, 2, 3, 4, 5] # Esta es una lista existente de números ocultos en el sombrero.
+
+listaSombrero[2] = int(input("Ingresa un número entero: "))
+
+del listaSombrero[4]
+
+print(len(listaSombrero))
+
+print(listaSombrero)
+
