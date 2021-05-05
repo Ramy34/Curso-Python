@@ -464,7 +464,7 @@ print(numeros[-1])
 print(numeros[-2])
 print(numeros[-4])
 
-#Ejercicio
+#Ejercicio de listas
 listaSombrero = [1, 2, 3, 4, 5] # Esta es una lista existente de números ocultos en el sombrero.
 
 listaSombrero[2] = int(input("Ingresa un número entero: "))
@@ -475,3 +475,126 @@ print(len(listaSombrero))
 
 print(listaSombrero)
 
+#Listas y métodos
+numeros = [111, 7, 2, 1]
+print(len(numeros))
+print(numeros)
+
+numeros.append(4)
+print(len(numeros))
+print(numeros)
+
+numeros.insert(0,222)
+print(len(numeros))
+print(numeros)
+
+numeros.insert(1,333)
+print(len(numeros))
+print(numeros)
+
+#Uso de los métodos append e insert
+miLista = [] 
+
+for i in range (5):
+    miLista.append (i + 1)
+
+print(miLista)
+
+miLista = []
+
+for i in range(5):
+    miLista.insert(0, i + 1)
+
+print(miLista)
+
+#Manejos de usar el for con listas
+miLista = [10, 1, 8, 3, 5]
+suma = 0
+
+for i in range(len(miLista)):
+    suma += miLista[i]
+
+print(suma)
+
+miLista = [10, 1, 8, 3, 5]
+suma = 0
+
+for i in miLista:
+    suma += i
+
+print(suma) 
+
+#Listas en acción
+variable1 = 1
+variable2 = 2
+
+variable1, variable2 = variable2, variable1
+
+#Formas de invertir el orden de una lista
+miLista = [10, 1, 8, 3, 5]
+
+miLista [0], miLista [4] = miLista [4], miLista [0]
+miLista [1], miLista [3] = miLista [3], miLista [1]
+
+print(miLista) 
+
+miLista = [10, 1, 8, 3, 5]
+longitud = len(miLista)
+
+for i in range (longitud // 2):
+    miLista[i], miLista[longitud-i-1] = miLista[longitud-i-1], miLista[i]
+
+print(miLista)
+
+#Ejercicio de listas
+beatles = []
+print("Paso 1:", beatles)
+
+beatles.append("John Lennon")
+beatles.append("Paul McCartney")
+beatles.append("George Harrison")
+print("Paso 2:", beatles)
+
+for i in range(2):
+    integrante = input("Inserta un nuevo miembro: ")
+    beatles.append(integrante)
+print("Paso 3:", beatles)
+
+del beatles[4]
+del beatles[3]
+print("Paso 4:", beatles)
+
+# paso 5
+beatles.insert(0, "Ringo Starr")
+print("Paso 5:", beatles)
+
+
+# probando la longitud de la lista
+print("Los Fab", len(beatles))
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+lst = [1, 2, 3, 4, 5]
+lst.insert(1, 6)
+del lst[0]
+lst.append(1)
+
+print(lst)  #[6, 2, 3, 4, 5, 1]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+lst = [1, 2, 3, 4, 5]
+lst2 = []
+agregar = 0
+
+for number in lst:
+    agregar += number
+    lst2.append (agregar)
+
+print(lst2) # [1, 3, 6, 10, 15]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+lst = [1, [2, 3], 4]
+print(lst[1]) # [2, 3]
+print(len(lst)) # 3
