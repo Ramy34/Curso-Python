@@ -598,3 +598,64 @@ print(lst2) # [1, 3, 6, 10, 15]
 lst = [1, [2, 3], 4]
 print(lst[1]) # [2, 3]
 print(len(lst)) # 3
+
+#Ordenamiento Burbuja
+miLista = [8, 10, 6, 2, 4] # lista para ordenar
+swapped = True # lo necesitamos verdadero (True) para ingresar al bucle while
+
+while swapped:
+    swapped = False # no hay swaps hasta ahora
+    for i in range(len(miLista) - 1):
+        if miLista[i] > miLista[i + 1]:
+            swapped= True # ocurrió el intercambio!
+            miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
+
+print(miLista) # [2, 4, 6, 8, 10]
+
+#Ordenamiento interactivo
+miLista = []
+swapped = True
+num = int (input("¿Cuántos elementos deseas ordenar?:"))
+
+for i in range(num):
+    val = float(input("Introduce un elemento de la lista:"))
+    miLista.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(miLista) - 1):
+        if miLista[i] > miLista[i + 1]:
+            swapped = True
+            miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
+
+print("\nOrdenado:")
+print(miLista)
+
+#¿Cuál es la salida del siguiente fragmento de código?
+lst = ["D", "F", "A", "Z"]
+lst.sort ()
+
+print(lst) #[A, D, F, Z]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+a = 3
+b = 1
+c = 2
+
+lst = [a, c, b]
+lst.sort ()
+
+print(lst) #[1, 2, 3]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+a = "A"
+b = "B"
+c = "C"
+d = ""
+
+lst = [a, b, c, d]
+lst.reverse ()
+
+print(lst) #[ , C, B, A]
