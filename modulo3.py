@@ -659,3 +659,66 @@ lst = [a, b, c, d]
 lst.reverse ()
 
 print(lst) #[ , C, B, A]
+
+#Operaciones con listas
+lista1 = [1]
+lista2 = lista1
+lista1[0] = 2
+print(lista2) # [2]
+
+# Copiando toda la lista
+lista1 = [1]
+lista2 = lista1[:]
+lista1[0] = 2
+print(lista2)
+
+# Copiando parte de la lista
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista[1:3]
+print(nuevaLista)
+
+#Rodajas
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista [1:-1]
+print(nuevaLista)
+
+#Rodajas sin inicio o sin final
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista [:3]
+print(nuevaLista)
+
+nuevaLista = miLista[3:]
+print(nuevaLista)
+
+#Rodaja sin inicio y final
+miLista = [10, 8, 6, 4, 2]
+nuevLista = miLista  [:] 
+print(nuevLista)
+
+#Las rodajas con del pueden eliminar en grupo
+miLista = [10, 8, 6, 4, 2]
+del miLista[1:3] 
+print(miLista)
+
+#Operadores in y not in
+miLista = [0, 3, 12, 8, 2]
+
+print(5 in miLista)
+print(5 not in miLista)
+print(12 in miLista)
+
+#Encontrar un elemento en una lista
+miLista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Encontrar = 5
+Encontrado = False
+
+for i in range(len(miLista)):
+    Encontrado = miLista[i] == Encontrar
+    if Encontrado:
+        break
+
+if Encontrado:
+    print("Elemento encontrado en el índice", i)
+else:
+    print("ausente")
+
