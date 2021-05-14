@@ -1,3 +1,4 @@
+#Códigos y ejercicios del Modulo 4
 #Comparaciones / operador igual ==
 2 == 2 #True
 2 == 2. #True
