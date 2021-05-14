@@ -782,3 +782,31 @@ print("A" not in miLista) # salida True
 print(3 not in miLista) # salida True
 print(False in miLista) # salida False
 
+#Compresión de listas
+cuadrados = [x ** 2 for x in range(10)] #[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+dos = [2 ** i for i in range(8)] #[1, 2, 4, 8, 16, 32, 64, 128]
+probabilidades = [x for x in cuadrados if x % 2 != 0] #[1, 9, 25, 49, 81]
+
+#Matrices
+EMPTY = "-"
+TORRE = "TORRE"
+CABALLO = "CABALLO"
+PEON = "PEÓN"
+tablero = []
+
+for i in range(8):
+    fila = [EMPTY for i in range(8)]
+    tablero.append (fila)
+
+tablero[0][0] = TORRE
+tablero[0][7] = TORRE
+tablero[7][0] = TORRE
+tablero[7][7] = TORRE
+
+tablero[4][2] = CABALLO
+
+
+tablero[3][4] = PEON
+
+print(tablero)
+
