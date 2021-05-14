@@ -722,3 +722,63 @@ if Encontrado:
 else:
     print("ausente")
 
+#Ejercicio de operación con listas
+miLista = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+tmp = []
+
+for elemento in miLista:
+    if (elemento not in tmp):
+        tmp.append(elemento)
+
+print("La lista solo con elementos únicos:")
+print(tmp)
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+l1 = ["A", "B", "C"]
+l2 = l1 #Copia la dirección a donde apunta l1
+l3 = l2
+
+del l1[0]
+del l2[0]
+
+print(l3) #[C]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+l1 = ["A", "B", "C"]
+l2 = l1
+l3 = l2
+
+del l1[0]
+del l2 #Elimina la variable
+
+print(l3) #[B, C]
+
+#l1 = ["A", "B", "C"]
+l2 = l1
+l3 = l2
+
+del l1[0]
+del l2[:] #Elimina todo el contenido de la lista
+
+print(l3) #[]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+l1 = ["A", "B", "C"]
+l2 = l1[:] #Copia el contenido
+l3 = l2[:]
+
+del l1[0]
+del l2[0]
+
+print(l3) #[A, B, C]
+
+#Decir las salidas de los print
+miLista = [1, 2, "in", True, "ABC"]
+
+print(1 in miLista) # salidas True
+print("A" not in miLista) # salida True
+print(3 not in miLista) # salida True
+print(False in miLista) # salida False
+
