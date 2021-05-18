@@ -296,7 +296,6 @@ def evenNumLst(ran):
 print(evenNumLst(11)) #[0,2,4,6,8,10]
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 def listUpdater(lst):
     updList = []
     for elem in lst:
@@ -306,3 +305,65 @@ def listUpdater(lst):
 
 l = [1, 2, 3, 4, 5]
 print(listUpdater(l)) #[1, 4, 9, 16, 25]
+
+#Alcances de las variables 
+def miFuncion():
+    print("¿Conozco a la variable?", var) #1
+
+var = 1
+miFuncion()
+print(var) #1
+
+#Utilizando global
+def miFuncion():
+    global var
+    var = 2
+    print("¿Conozco a aquella variable?", var) #2
+
+var = 1
+miFuncion()
+print(var) #2
+
+#Alcances con listas como parámetros
+def miFuncion(miLista1):
+    print(miLista1) #[2, 3]
+    del miLista1[0]
+
+miLista2 = [2, 3]
+miFuncion(miLista2)
+print(miLista2) #[3]
+
+#¿Cuál es la salida del siguiente fragmento de código?
+a = 1
+
+def fun():
+    a = 2
+    print(a) #2
+
+fun()
+print(a) #1
+
+#¿Cuál es la salida del siguiente fragmento de código?
+a = 1
+
+def fun():
+    global a
+    a = 2
+    print(a) #2
+
+fun()
+a = 3
+print(a) #3
+
+#¿Cuál es la salida del siguiente fragmento de código?
+a = 1
+
+def fun():
+    global a
+    a = 2
+    print(a) #2
+
+a = 3
+fun()
+print(a) #2
+
