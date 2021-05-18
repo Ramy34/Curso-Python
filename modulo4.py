@@ -367,3 +367,86 @@ a = 3
 fun()
 print(a) #2
 
+#Indice de Masa corporal
+def piespulgam(pies, pulgadas = 0.0):
+    return pies * 0.3048 + pulgadas * 0.0254
+
+
+def lbsakg(lb):
+    return lb * 0.45359237
+
+
+def imc(peso, altura):
+    if altura < 1.0 or altura > 2.5 or \
+    peso < 20 or peso > 200:
+        return None
+    
+    return peso / altura ** 2
+
+
+print(imc(peso = lbsakg(176), altura = piespulgam(5, 7)))
+
+#Formar triángulos
+def esUnTriangulo (a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+print(esUnTriangulo (1, 1, 1))
+print(esUnTriangulo (1, 1, 3))
+
+#Factorial
+def factorialFun(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    
+    producto = 1
+    for i in range(2, n + 1):
+        producto *= i
+    return producto
+
+for n in range(1, 6): # probando
+    print(n, factorialFun(n))
+
+#Serie de Fibonacci
+def fib(n):
+    if n < 1:
+         return None
+    if n < 3:
+        return 1
+
+    elem1 = elem2 = 1
+    sum = 0
+    for i in range(3, n + 1):
+        sum = elem1 + elem2
+        elem1, elem2 = elem2, sum
+    return sum
+
+for n in range(1, 10): # probando
+    print(n, "->", fib(n))
+
+#Recursividad
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+def factorialFun(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    return n * factorialFun(n - 1)
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+def fun(a):
+    if a > 30:
+        return 3
+    else:
+        return a + fun(a + 3)
+
+print(fun(25)) #56
+
