@@ -9,4 +9,4 @@
 
 ### Python Essentials - Parte 2: Intermedio
 - Módulo 5: Módulos, paquetes, métodos de listas y excepciones
-- Módulo 6: El enfoque orientado a objetos: clases, métodos y sus características estándar: manejode excepciones y manejo de archivos
+- Módulo 6: El enfoque orientado a objetos: clases, métodos y sus características estándar: manejo de excepciones y manejo de archivos
