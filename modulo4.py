@@ -267,7 +267,6 @@ print(mpgtol100km(31.4))
 print(mpgtol100km(23.5))
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 def hola():
     return
     print("¡Hola!")
@@ -441,7 +440,6 @@ def factorialFun(n):
     return n * factorialFun(n - 1)
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 def fun(a):
     if a > 30:
         return 3
@@ -500,3 +498,115 @@ for word in words:
     else:
         print(word, "no está en el diccionario")
 
+#Métodos Key y Sorted en diccionarios
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+for key in dict.keys():
+    print(key, "->", dict[key])
+
+for key in sorted(dict.keys()):
+    print(key, "->", dict[key])
+
+#Métodos item y values en diccionarios
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+for spanish, french in dict.items():
+    print(spanish, "->", french)
+    
+for french in dict.values():
+    print(french)
+
+#Modificar valores en diccionarios
+dict = {"gato" : "perro", "dog" : "chien", "caballo" : "cheval"}
+
+dict['gato'] = 'minou'
+print(dict)
+
+#Agregar nuevas claves a diccionarios
+#En forma de lista
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+dict['cisne'] = 'cygne'
+print(dict)
+
+#Con update
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+dict.update({"pato" : "canard"})
+print(dict)
+
+#Eliminar claves de diccionarios
+#Con del
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+del dict['perro']
+print(dict)
+
+#Con popitem
+dict = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+
+dict.popitem()
+print(dict)    # outputs: {'gato' : 'chat', 'perro' : 'chien'}
+
+#Tuplas y Diccionarios
+grupo = {}
+
+while True:
+    nombre = input("Ingresa el nombre del estudiante (o exit para detenerse): ")
+    if nombre == 'exit':
+        break
+    
+    calif = int(input("Ingresa la calificación del alumno (0-10): "))
+    
+    if nombre in grupo:
+        grupo[nombre] += (calif,)
+    else:
+        grupo[nombre] = (calif,)
+        
+for nombre in sorted(grupo.keys()):
+    sum = 0
+    contador = 0
+    for calif in grupo[nombre]:
+        sum += calif
+        contador += 1
+    print(nombre, ":", sum / contador)
+
+#¿Que ocurrirá cuando se intente ejecutar el siguiente código?
+
+miTup = (1, 2, 3)
+print(miTup[2]) #3
+
+#¿Cuál es la salida del siguiente fragmento de código?
+
+tup = 1, 2, 3
+a, b, c = tup
+
+print(a * b * c) #6
+
+#Completa el código para emplear correctamente el método count() para encontrar la cantidad de 2 duplicados en la tupla siguiente.
+tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+duplicado = tup.count(2)  #tup.count(2) fue el método que buscaba la cantidad de 2 en la tupla
+
+print(duplicado)    # salida: 4
+
+#Escribe un programa que "una" los dos diccionarios (d1 y d2) para crear uno nuevo (d3).
+d1 = {'Adam Smith':'A', 'Judy Paxton':'B+'}
+d2 = {'Mary Louis':'A', 'Patrick White':'C'}
+d3 = {}
+
+for elemento in (d1, d2):
+    d3.update(elemento) #Aquí se hace la unión de los diccionarios
+
+print(d3)
+
+#¿Cuál es la salida del siguiente programa?
+
+colores = {
+    "blanco" : (255, 255, 255),
+    "gris"   : (128, 128, 128),
+    "rojo"   : (255, 0, 0),
+    "verde"  : (0, 128, 0)
+    }
+
+for col, rgb in colores.items():
+    print(col, ":", rgb) #salida: blanco : (255, 255, 255)

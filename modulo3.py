@@ -574,7 +574,6 @@ print("Paso 5:", beatles)
 print("Los Fab", len(beatles))
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 lst = [1, 2, 3, 4, 5]
 lst.insert(1, 6)
 del lst[0]
@@ -583,7 +582,6 @@ lst.append(1)
 print(lst)  #[6, 2, 3, 4, 5, 1]
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 lst = [1, 2, 3, 4, 5]
 lst2 = []
 agregar = 0
@@ -595,7 +593,6 @@ for number in lst:
 print(lst2) # [1, 3, 6, 10, 15]
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 lst = [1, [2, 3], 4]
 print(lst[1]) # [2, 3]
 print(len(lst)) # 3
@@ -639,7 +636,6 @@ lst.sort ()
 print(lst) #[A, D, F, Z]
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 a = 3
 b = 1
 c = 2
@@ -650,7 +646,6 @@ lst.sort ()
 print(lst) #[1, 2, 3]
 
 #¿Cuál es la salida del siguiente fragmento de código?
-
 a = "A"
 b = "B"
 c = "C"
