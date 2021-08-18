@@ -153,3 +153,83 @@ for atr in python_version_tuple():
 from sys import path
 path.append('Dirección del modulo')
 
+#Manejo de errores try y except
+try:
+    print("1")
+    x = 1 / 0
+    print("2")
+except:
+    print("Oh cielos, algo salio mal...")
+
+print("3")
+
+#Manje de errores más específicos
+try:
+    x = int(input("Ingresa un numero: "))
+    y = 1 / x
+    print(y)
+except ZeroDivisionError:
+    print("No puedes dividir entre cero, lo siento.")
+except ValueError:
+    print("Debes ingresar un valor entero.")
+except:
+    print("Oh cielos, algo salio mal...")
+
+print("THE END.")
+
+#Jerarquía de excepciones
+try:
+    y = 1 / 0
+except ZeroDivisionError: #ArithmeticError, Exception, BaseException
+    print("Uuuppsss...")
+
+print("FIN.")
+
+#Manejo de excepciones en funciones
+def badFun(n):
+    try:
+        return 1 / n
+    except ArithmeticError:
+        print("¡Problema aritmético!")
+    return None
+
+badFun(0)
+
+print("FIN.")
+
+def badFun(n):
+    return 1 / n
+
+try:
+    badFun(0)
+except ArithmeticError:
+    print("¿Que pasó? ¡Se lanzo una excepción!")
+
+print("FIN.")
+
+#Palabra raise sirve para simular errores del tipo que se quiera
+def badFun(n):
+    raise ZeroDivisionError
+
+try:
+    badFun(0)
+except ArithmeticError:
+    print("¿Que pasó? ¿Un error?")
+
+print("FIN.")
+
+#Raise dentro del except, genera la misma excepción
+def badFun(n):
+    try:
+        return n / 0
+    except:
+        print("¡Lo hice otra vez!")
+        raise
+
+try:
+    badFun(0)
+except ArithmeticError:
+    print("¡Ya veo!")
+
+print("FIN.")
+
