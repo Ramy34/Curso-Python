@@ -233,3 +233,60 @@ except ArithmeticError:
 
 print("FIN.")
 
+#Palabra assert, genera un error si no se cumple la condición
+import math
+
+x = float(input("Ingresa un numero: "))
+assert x >= 0.0
+
+x = math.sqrt(x)
+
+print(x)
+
+#Ejercicio
+def readint(prompt, min, max):
+    ok = False
+    while not ok:
+        try:
+            value = int(input(prompt))
+            ok = True
+        except ValueError:
+            print("Error: entrada incorrecta")
+        if ok:
+            ok = value >= min and value <= max
+        if not ok:
+            print("Error: el valor no esta dentro del rango permitido (" + str(min) + ".." + str(max) + ")")
+    return value;
+
+v = readint("Ingresa un número entre -10 a 10: ", -10, 10)
+
+print("El numero es:", v)
+
+#Cadenas: Como crear una cadena multilinea
+multiLinea = '''Linea #1
+Linea #2'''
+
+print(len(multiLinea))
+
+#Concateción y replicas de cadenas
+str1 = 'a'
+str2 = 'b'
+
+print(str1 + str2)
+print(str2 + str1)
+print(5 * 'a')
+print('b' * 4)
+
+# Demostrando la función ord ()
+
+ch1 = 'a' 
+ch2 = ' ' # espacio
+
+print(ord(ch1))
+print(ord(ch2))
+
+# Demostrando la función chr()
+
+print(chr(97)) # a
+print(chr(945)) # alpha o ñ
+
