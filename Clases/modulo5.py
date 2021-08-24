@@ -290,3 +290,46 @@ print(ord(ch2))
 print(chr(97)) # a
 print(chr(945)) # alpha o ñ
 
+# Indexando cadenas
+exampleString = 'silly walks'
+
+for ix in range(len(exampleString)):
+    print(exampleString[ix], end=' ')
+
+print()
+
+# Iterando a través de una cadena
+exampleString = 'silly walks'
+
+for ch in exampleString:
+    print(ch, end=' ')
+
+print()
+
+# Rodajas o rebanadas de cadenas
+alpha = "abdefg"
+
+print(alpha[1:3])
+print(alpha[3:])
+print(alpha[:3])
+print(alpha[3:-2])
+print(alpha[-3:4])
+print(alpha[::2])
+print(alpha[1::2])
+
+#Operadores In y Not In en cadenas
+alpfabeto = "abcdefghijklmnopqrstuvwxyz"
+
+print("f" in alpfabeto)
+print("F" in alpfabeto)
+print("1" in alpfabeto)
+print("ghi" in alpfabeto)
+print("Xyz" in alpfabeto)
+
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
+print("f" not in alfabeto)
+print("F" not in alfabeto)
+print("1" not in alfabeto)
+print("ghi" not in alfabeto)
+print("Xyz" not in alfabeto)
+
