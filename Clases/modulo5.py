@@ -333,3 +333,80 @@ print("1" not in alfabeto)
 print("ghi" not in alfabeto)
 print("Xyz" not in alfabeto)
 
+#Cadenas inmutables
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
+
+#del alfabeto[0] es un error
+del alfabeto #Elimina la cadena
+
+#alfabeto.append("A") es un error
+alfabeto += "A" #Agrega una letra al final de la cadena
+
+#alfabeto.insert(0, "A") es un error
+
+# Demonstrando min() - Ejemplo 1
+print(min("aAbByYzZ")) # a
+
+
+# Demonstrando min() - Examplos 2 y 3
+t = 'Los Caballeros Que Dicen "¡Ni!"'
+print('[' + min(t) + ']') # [ ]
+
+t = [0, 1, 2]
+print(min(t)) # 0
+
+# Demostrando max() - Ejemplo 1
+print(max("aAbByYzZ")) 
+
+
+# Demonstrando max() - Examplos 2 y 3
+t = 'Los Caballeros Que Dicen "¡Ni!"'
+print('[' + max(t) + ']')
+
+t = [0, 1, 2]
+print(max(t))
+
+# Demonstrando el método index()
+print("aAbByYzZaA".index("b"))
+print("aAbByYzZaA".index("Z"))
+print("aAbByYzZaA".index("A"))
+
+# Demostrando la función list()
+print(list("abcabc"))
+
+# Demostrando el método count()
+print("abcabc".count("b"))
+print('abcabc'.count("d"))
+
+# Demostración del método capitalize()
+print('aBcD'.capitalize())
+print('123'.capitalize())
+print("αβγδ".capitalize())
+
+# Demostración del método center()
+print('[' + 'alfa'.center(10) + ']')
+print('[' + 'Beta'.center(2) + ']')
+print('[' + 'Beta'.center(4) + ']')
+print('[' + 'Beta'.center(6) + ']')
+print('[' + 'gamma'.center(20, '*') + ']')
+
+# Demostración del método endswith()
+if "epsilon".endswith("on"):
+    print("si")
+else:
+    print("no")
+    
+t = "zeta"
+print(t.endswith("a"))
+print(t.endswith("A"))
+print(t.endswith("et"))
+print(t.endswith("eta"))
+
+# Demostración del método find()
+print("Eta".find("ta"))
+print("Eta".find("mma"))
+print('kappa'.find('a', 2))
+
+print('kappa'.find('a', 1, 4))
+print('kappa'.find('a', 2, 4))
+
