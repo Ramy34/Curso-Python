@@ -457,7 +457,7 @@ print(",".join(["omicron", "pi", "rho"])) # omicron,pi,rho
 print("SiGmA=60".lower()) # sigma=60
 
 # Demostración del método the lstrip()
-print("[" + " tau ".lstrip() + "]") # [ tau ]
+print("[" + " tau ".lstrip() + "]") # [tau ]
 print("www.cisco.com".lstrip("w.")) # ww.cisco.com
 print("pythoninstitute.org".lstrip(".org")) # pythoninstitute
 
@@ -467,4 +467,36 @@ print("This is it!".replace("is", "are")) # This are it!
 print("Apple juice".replace("juice", "")) # Apple
 print("This is it!".replace("is", "are", 1)) # This are it!
 print("This is it!".replace("is", "are", 2)) # This are it!
+
+# Demostración del método rfind()
+print("tau tau tau".rfind("ta")) # 8
+print("tau tau tau".rfind("ta", 9)) # -1
+print("tau tau tau".rfind("ta", 3, 9)) # 4
+
+# Demostración del método rstrip()
+print("[" + " upsilon ".rstrip() + "]") # [ upsilon]
+print("cisco.com".rstrip(".com")) # cisco
+
+# Demostración del método split()
+print("phi       chi\npsi".split()) # ['phi', 'chi', 'psi']
+
+# Demostración del método startswith()
+print("omega".startswith("meg")) # False
+print("omega".startswith("om")) # True
+
+# Demostración del método strip() 
+print("[" + "   aleph   ".strip() + "]") # [aleph]
+
+# Demostración del método swapcase()
+print("Yo sé que no sé nada.".swapcase()) # yO SÉ QUE NO SÉ NADA.
+
+print()
+
+# Demostración del método title()
+print("Yo sé que no sé nada. Parte 1.".title()) # Yo Sé Que No Sé Nada. Parte 1.
+
+print()
+
+# Demostración del método upper()
+print("Yo sé que no sé nada. Parte 2.".upper()) # YO SÉ QUE NO SÉ NADA. PARTE 2.
 
