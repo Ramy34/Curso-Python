@@ -358,7 +358,6 @@ print(min(t)) # 0
 # Demostrando max() - Ejemplo 1
 print(max("aAbByYzZ")) # z
 
-
 # Demonstrando max() - Examplos 2 y 3
 t = 'Los Caballeros Que Dicen "¡Ni!"'
 print('[' + max(t) + ']') # [ ]
@@ -499,4 +498,25 @@ print()
 
 # Demostración del método upper()
 print("Yo sé que no sé nada. Parte 2.".upper()) # YO SÉ QUE NO SÉ NADA. PARTE 2.
+
+#Ejercicio
+def misplit(string):
+    lista = []
+    tmp = ""
+    for ch in string:
+        if(ch == " "):
+            if(tmp != ""):
+                lista.append(tmp)
+                tmp = ""
+        else:
+            tmp += ch
+    if(tmp != ""):
+        lista.append(tmp)
+    return lista
+
+print(misplit("Ser o no ser, esa es la pregunta"))
+print(misplit("Ser o no ser,esa es la pregunta"))
+print(misplit("   "))
+print(misplit(" abc "))
+print(misplit(""))
 
