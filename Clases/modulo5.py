@@ -520,3 +520,91 @@ print(misplit("   "))
 print(misplit(" abc "))
 print(misplit(""))
 
+#Comparación de cadenas
+print('alfa' == 'alfa') # True
+print('alfa' != 'Alfa') # True
+print('alfa' < 'alfabeto') # True
+print('beta' > 'Beta') # True
+
+print('10' == '010') # False
+print('10' > '010') # True
+print('10' > '8') # False
+print('20' < '8') # True
+print('20' < '80') # True
+
+print('10' == 10) # False
+print('10' != 10) # True
+print('10' == 1) # False
+print('10' != 1) #True
+# print('10' > 10) error
+
+# Demostración de la función sorted(), crea una nueva lista
+firstGreek = ['omega', 'alfa', 'pi', 'gama']
+firstGreek2 = sorted(firstGreek)
+
+print(firstGreek) # ['omega', 'alfa', 'pi', 'gama']
+print(firstGreek2) # ['alfa', 'gama', 'omega', 'pi']
+
+# Demostración del método sort(), no crea una lista nueva modifica la original
+secondGreek = ['omega', 'alfa', 'pi', 'gama']
+print(secondGreek) # ['omega', 'alfa', 'pi', 'gama']
+
+secondGreek.sort()
+print(secondGreek) # ['alfa', 'gama', 'omega', 'pi']
+
+#Convirtiendo numeros a cadenas
+itg = 13
+flt = 1.3
+si = str(itg)
+sf = str(flt)
+
+print(si + ' ' + sf)
+
+#Convirtiendo cadenas a numeros
+si = '13'
+sf = '1.3'
+itg = int(si)
+flt = float(sf)
+
+print(itg + flt)
+
+#Ejercicio
+digitos=['1111110',  	# 0
+	   '0110000',	# 1
+	   '1101101',	# 2
+	   '1111001',	# 3
+	   '0110011',	# 4
+	   '1011011',	# 5
+	   '1011111',	# 6
+	   '1110000',	# 7
+	   '1111111',	# 8
+	   '1111011',	# 9
+	   ]
+def printNumero(num):
+	global digitos
+	digs = str(num)
+	lineas = [ '' for l in range(5) ]
+	for d in digs:
+		segs = [ [' ',' ',' '] for l in range(5) ]
+		ptrn = digitos[ord(d) - ord('0')]
+		if ptrn[0] == '1':
+			segs[0][0] = segs[0][1] = segs[0][2] = '#'
+		if ptrn[1] == '1':
+			segs[0][2] = segs[1][2] = segs[2][2] = '#'
+		if ptrn[2] == '1':
+			segs[2][2] = segs[3][2] = segs[4][2] = '#'
+		if ptrn[3] == '1':
+			segs[4][0] = segs[4][1] = segs[4][2] = '#'
+		if ptrn[4] == '1':
+			segs[2][0] = segs[3][0] = segs[4][0] = '#'
+		if ptrn[5] == '1':
+			segs[0][0] = segs[1][0] = segs[2][0] = '#'
+		if ptrn[6] == '1':
+			segs[2][0] = segs[2][1] = segs[2][2] = '#'
+		for l in range(5):
+			lineas[l] += ''.join(segs[l]) + ' '
+	for l in lineas:
+		print(l)
+
+printNumero(int(input("Ingresa el número que deseas mostrar: ")))
+
