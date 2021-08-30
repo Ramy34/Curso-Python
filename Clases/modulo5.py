@@ -558,7 +558,7 @@ flt = 1.3
 si = str(itg)
 sf = str(flt)
 
-print(si + ' ' + sf)
+print(si + ' ' + sf) # 13 1.3
 
 #Convirtiendo cadenas a numeros
 si = '13'
@@ -566,7 +566,7 @@ sf = '1.3'
 itg = int(si)
 flt = float(sf)
 
-print(itg + flt)
+print(itg + flt) # 14.3
 
 #Ejercicio
 digitos=['1111110',  	# 0
@@ -607,4 +607,141 @@ def printNumero(num):
 		print(l)
 
 printNumero(int(input("Ingresa el número que deseas mostrar: ")))
+
+# Cifrado César
+text = input("Ingresa tu mensaje: ")
+cifrado = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) + 1
+    if code > ord('Z'):
+        code = ord('A')
+    cifrado += chr(code)
+
+print(cifrado)
+
+# Cifrado César - descifrar un mensaje
+cifrado = input('Ingresa tu criptograma: ')
+text = ''
+for char in cifrado:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) - 1
+    if code < ord('A'):
+        code = ord('Z')
+    text += chr(code)
+
+print(text)
+
+#Procesador de números
+linea = input("Ingresa una línea de números, sepáralos con espacios: ")
+strings = linea.split()
+total = 0
+try:
+    for substr in strings:
+        total += float(substr)
+    print("El total es:", total)
+except:
+    print(substr, "no es un numero.")
+
+# Validador IBAN
+
+iban = input("Ingresa IBAN, por favor: ")
+iban = iban.replace(' ','')
+if not iban.isalnum():
+    print("Has introducido caracteres no válidos.")
+elif len(iban) < 15:
+    print("El IBAN ingresado es demasiado corto.")
+elif len(iban) > 31:
+    print("El IBAN ingresado es demasiado largo.")
+else:
+    iban = (iban[4:] + iban[0:4]).upper()
+    iban2 = ''
+    for ch in iban:
+        if ch.isdigit():
+            iban2 += ch
+        else:
+            iban2 += str(10 + ord(ch) - ord('A'))
+    ibann = int(iban2)
+    if ibann % 97 == 1:
+        print("El IBAN ingresado es válido.")
+    else:
+        print("El IBAN ingresado no es válido.")
+
+#Cifrado Cesar con un valor de cambio variable
+mensaje = input("Escribe tu mensaje a cifrar: ") #Pedimos el mensaje a cifrar
+mensajeCifrado = '' #Inicializamos la variable que contendra el mensaje cifrado
+while True:
+    tamano = input("Ingresa el valor de cambio de 1 a 25: ") #Pedimos el valor de cambio
+    if tamano.isdigit(): #Comprobamos si es un int
+        tamano = int(tamano) #Convertimos a int
+        if tamano > 0 and tamano < 26: #Comprobamos que es mayor que 0 y menor que 26
+            break #Se ha cumplido la condicion y se sale del bucle
+    print("Valor no válido!") #Si no se cumple la condicion se imprime esta mensaje y se vuelve a pedir el valor
+
+for char in mensaje: #Creamos un bucle para recorrer el mensaje
+    if not char.isalpha(): #Comprobamos si es una letra
+        mensajeCifrado += char #Si no es una letra se añade a la variable que contendra el mensaje cifrado
+        continue #Y se vuelve a ejecutar el bucle
+    code = ord(char) + tamano #Obtenemos el valor ascii del caracter y le sumamos el valor de cambio
+    if char.isupper(): #Revisa si el caracter es mayuscula
+        if code > ord('Z'): #Comprobamos si el valor ascii es mayor que el valor ascii de Z
+            code -= 26 #Si es mayor se resta 26 para que el valor ascii sea igual al de una letra mayuscula
+    else: #Si no es mayuscula
+        if code > ord('z'): #Comprobamos si el valor ascii es mayor que el valor ascii de z
+            code -= 26 #Si es mayor se resta 26 para que el valor ascii sea igual al de una letra minuscula
+    mensajeCifrado += chr(code) #Añadimos el caracter cifrado a la variable que contendra el mensaje cifrado
+
+print(mensajeCifrado) #Imprimimos el mensaje cifrado
+
+#Palíndromos
+palabra = input("Ingresa una palabra: ") # Se le pide al usuario que ingrese una palabra
+if palabra == '': # Revisamos si la cadena ingresada es vacía
+    print("No es un palíndromo")
+else: 
+    palabra = palabra.lower() # Se convierte la palabra a minusculas
+    palabra = palabra.replace(' ','') # Se elimina los espacios
+    if palabra == palabra[::-1]: # Se compara la palabra ingresada con su inversa
+        print("Es palíndromo")
+    else:
+        print("No es palíndromo")
+
+#Anagramas
+def acomodar(palabra):
+    return sorted(palabra.lower().replace(" ", ""))
+
+palabra = input("Ingrese una palabra: ") # Se le pide al usuario ingresar una palabra
+anagrama = input("Ingrese una palabra anagrama: ") # Se le pide al usuario ingresar una palabra anagrama de la que se desea comparar
+if len(palabra) != 0 or len(anagrama) != 0 or len(palabra) == len(anagrama): # Se comprueba que la longitud de ambas palabras sea la misma y que no estén vacías
+    palabra = acomodar(palabra) # Se acomoda la palabra ingresada para que sea más fácil compararla
+    anagrama = acomodar(anagrama) # Se acomoda la palabra ingresada para que sea más fácil compararla
+    if palabra == anagrama:
+        print("Es anagrama")
+    else:
+        print("No es anagrama")
+else:
+    print("No son anagramas") # Si no se cumplen las condiciones, se imprime que no son anagramas
+
+#Digito de la vida
+def formato(fecha): #Función que nos ayuda a formatear la fecha
+    return fecha.replace(" ","")
+
+digitoVida = 0 #Inicializamos la variable que contendrá el digito de la vida
+fecha = input("Ingresa tu fecha de nacimiento en números: ") # Se le pide al usuario ingresar una fecha
+fecha = formato(fecha) # Se formatea la fecha
+if fecha.isdigit() and len(fecha) >= 6 and len(fecha) <= 8: # Se comprueba que la fecha sea correcta
+    while True:
+        for num in fecha: # Se recorre la fecha
+            digitoVida += int(num) # Se suma el valor de cada dígito de la fecha
+        if (len(str(digitoVida)) == 1): # Se revisa el que el digito de la vida sea un valor de 0 a 9
+            print(digitoVida) # Se imprime el digito de la vida
+            break;
+        else: # Si no es un valor de 0 a 9
+            fecha = str(digitoVida) # Se guarda como cadena el digito de la vida en fecha
+            digitoVida = 0 # Se reinicializa la variable
+else:
+    print("Error, fecha no válida")
 
